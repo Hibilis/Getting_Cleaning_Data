@@ -39,7 +39,7 @@ Set_Train <- read.table("./train/X_train.txt")
 Labels_Train <- read.table("./train/y_train.txt")
 Subjects_Train <- read.table("./train/subject_train.txt")
 
-#####...using appropriately descriptive variable names - Condition 4 ####
+#####...using appropriately descriptive variable names - Component 4 ####
 colnames(Set_Train)<-featlabls  
 colnames(Labels_Train) <- c("Lable")
 colnames(Subjects_Train) <- c("Sbjt")
