@@ -1,0 +1,170 @@
+Initial Data, and Comination into full data set:
+
+In this analysis, 2 datasets (test and train) are combined – first with 
+identifying variables (subject, and activity labels), and then with each other.
+The test dataset contains 2947 observations, and the train dataset contains 
+7352 observations – of 564 measurement variables, collected across 6 activities.
+
+Activity lables:
+1	Walking
+2	Walking_Upstairs
+3	Walking_Downstairs
+4	Sitting
+5	Standing
+6	Laying
+
+The measurement variables represent 20 summary values for 24 measurement types.
+All data was collected by Samsung smartphones.
+
+Summary Values:
+mean()
+std()
+mad()
+max()
+min()
+sma()
+energy()
+iqr()
+entropy()
+arCoeff()
+correlation()
+arCoeff()1
+arCoeff()2
+arCoeff()3
+arCoeff()4
+maxInds
+meanFreq()
+skewness()
+kurtosis()
+bandsEnergy()
+
+Measurement types:
+tBodyAcc
+tGravityAcc
+tBodyAccJerk
+tBodyGyro
+tBodyGyroJerk
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc
+fBodyAccJerk
+fBodyGyro
+fBodyAccMag
+fBodyBodyAccJerkMag
+fBodyBodyGyroMag
+fBodyBodyGyroJerkMag
+angle(tBodyAccMean,gravity)
+angle(tBodyAccJerkMean),gravityMean)
+angle(tBodyGyroMean,gravityMean)
+angle(tBodyGyroJerkMean,gravityMean)
+angle(X,gravityMean)
+angle(Y,gravityMean)
+angle(Z,gravityMean)
+
+
+Using R script run_analysis.r, a “Final” subset of the combination of 564 measurement 
+variables including only mean and standard deviation values for the various measurements
+was extracted, yielding a dataset with 6 rows per participant, representing measurements 
+taken during each of the 6 activities. 79 mean and standard deviation measures were extracted:
+
+tBodyAccmean()X
+tBodyAccmean()Y
+tBodyAccmean()Z
+tBodyAccstd()X
+tBodyAccstd()Y
+tBodyAccstd()Z
+tGravityAccmean()X
+tGravityAccmean()Y
+tGravityAccmean()Z
+tGravityAccstd()X
+tGravityAccstd()Y
+tGravityAccstd()Z
+tBodyAccJerkmean()X
+tBodyAccJerkmean()Y
+tBodyAccJerkmean()Z
+tBodyAccJerkstd()X
+tBodyAccJerkstd()Y
+tBodyAccJerkstd()Z
+tBodyGyromean()X
+tBodyGyromean()Y
+tBodyGyromean()Z
+tBodyGyrostd()X
+tBodyGyrostd()Y
+tBodyGyrostd()Z
+tBodyGyroJerkmean()X
+tBodyGyroJerkmean()Y
+tBodyGyroJerkmean()Z
+tBodyGyroJerkstd()X
+tBodyGyroJerkstd()Y
+tBodyGyroJerkstd()Z
+tBodyAccMagmean()
+tBodyAccMagstd()
+tGravityAccMagmean()
+tGravityAccMagstd()
+tBodyAccJerkMagmean()
+tBodyAccJerkMagstd()
+tBodyGyroMagmean()
+tBodyGyroMagstd()
+tBodyGyroJerkMagmean()
+tBodyGyroJerkMagstd()
+fBodyAccmean()X
+fBodyAccmean()Y
+fBodyAccmean()Z
+fBodyAccstd()X
+fBodyAccstd()Y
+fBodyAccstd()Z
+fBodyAccmeanFreq()X
+fBodyAccmeanFreq()Y
+fBodyAccmeanFreq()Z
+fBodyAccJerkmean()X
+fBodyAccJerkmean()Y
+fBodyAccJerkmean()Z
+fBodyAccJerkstd()X
+fBodyAccJerkstd()Y
+fBodyAccJerkstd()Z
+fBodyAccJerkmeanFreq()X
+fBodyAccJerkmeanFreq()Y
+fBodyAccJerkmeanFreq()Z
+fBodyGyromean()X
+fBodyGyromean()Y
+fBodyGyromean()Z
+fBodyGyrostd()X
+fBodyGyrostd()Y
+fBodyGyrostd()Z
+fBodyGyromeanFreq()X
+fBodyGyromeanFreq()Y
+fBodyGyromeanFreq()Z
+fBodyAccMagmean()
+fBodyAccMagstd()
+fBodyAccMagmeanFreq()
+fBodyBodyAccJerkMagmean()
+fBodyBodyAccJerkMagstd()
+fBodyBodyAccJerkMagmeanFreq()
+fBodyBodyGyroMagmean()
+fBodyBodyGyroMagstd()
+fBodyBodyGyroMagmeanFreq()
+fBodyBodyGyroJerkMagmean()
+fBodyBodyGyroJerkMagstd()
+fBodyBodyGyroJerkMagmeanFreq()
+
+  
+Measurement Units:
+Information about measurement units is available in the README.txt file provided in the initial data extract.  It is summarized
+briefly below, please see the original documentation.
+
+Subjects - individual test or train subjects.  Values range from 1 to 30
+
+Gravity Acceleration - measured in standard gravity units 'g', on X, Y, and Z axes
+
+Body Acceleration - The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+
+Gyro - The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+
+
+########
+The Final_Tidy dataset aggregates the mean and standard deviation data, calculating the average of the 79 mean and standard deviation
+columns, for each subject and activity - creating a final summary matrix of 180 observations of 81 variables (including subject and 
+activity label).
