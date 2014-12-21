@@ -10,3 +10,7 @@ The zipped data file contains 4 files (activity_labels, features, features_info,
 The README file contains information regarding all of the files and folders - read this file before running the analysis in R.
 
 Test data contains 2947 observations, and Train data contains 7352 observations - if your export does not contain these observation counts, you may want to re-extract the data.
+
+The dataset was sourced from:
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
