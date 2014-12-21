@@ -2,18 +2,8 @@
 ###################################################################################
 # Initial Set Up
 ###################################################################################
-
-getwd()
-
-#download .zip file
-fileUrl2 = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(fileUrl2,destfile="./data/wearData.zip")
-
-#Unzip file
-zipfile <- "./data/wearData.zip"
-unzip(zipfile, files = NULL, list = FALSE, overwrite = TRUE,
-      junkpaths = FALSE, exdir = ".", unzip = "internal",
-      setTimes = FALSE)
+# Script must be capable of running as long as the Samsung data is in your working directory
+# so download and extraction steps are external to this script
 
 #list file contents
 list.files()
